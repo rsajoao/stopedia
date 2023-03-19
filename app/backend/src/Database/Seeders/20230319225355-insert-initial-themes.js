@@ -1,19 +1,23 @@
 'use strict';
 
-export async function up(queryInterface) {
-  await queryInterface.bulkInsert('themes', [
-    { name: 'VARIEDADES' },
-    { name: 'DIVERTIDAS' },
-    { name: 'CONHECIMENTOS GERAIS' },
-    { name: 'CINEMA E TV' },
-    { name: 'NATUREZA' },
-    { name: 'VOCABULÁRIO' },
-    { name: 'COMPLETE A FRASE' },
-    { name: 'ESPORTES' },
-    { name: 'COMIDA' },
-    { name: 'ENTRETENIMENTO' },
-  ], {});
-}
-export async function down(queryInterface) {
-  await queryInterface.bulkDelete('users', null, {});
-}
+// eslint-disable-next-line no-undef
+module.exports = {
+  up: async (queryInterface) => {
+    await queryInterface.bulkInsert('themes', [
+      { name: 'VARIEDADES' },
+      { name: 'DIVERTIDAS' },
+      { name: 'CONHECIMENTOS GERAIS' },
+      { name: 'CINEMA E TV' },
+      { name: 'NATUREZA' },
+      { name: 'VOCABULÁRIO' },
+      { name: 'COMPLETE A FRASE' },
+      { name: 'ESPORTES' },
+      { name: 'COMIDA' },
+      { name: 'ENTRETENIMENTO' },
+    ], {});
+  },
+
+  down: async (queryInterface) => {
+    await queryInterface.bulkDelete('users', null, {})
+  }
+};
