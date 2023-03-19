@@ -1,0 +1,30 @@
+{
+  "name": "stopedia",
+  "version": "1.0.0",
+  "description": "Uma aplicação para acessar e postar respostas para o famoso jogo infantil \"adedonha\", também conhecido como \"adedanha\" e \"stop\". Tem como base os temas e as categorias do jogo para mobile \"Stop\", da empresa \"Fanatee\".",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rsajoao/stopedia.git"
+  },
+  "author": "https://github.com/rsajoao",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rsajoao/stopedia/issues"
+  },
+  "homepage": "https://github.com/rsajoao/stopedia#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^8.0.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
