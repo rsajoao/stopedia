@@ -5,3 +5,5 @@ export type Rarity = 'unknown' | 'common' | 'rare';
 export type Status = 'pending' | 'accepcted' | 'rejected';
 
 export type Visibility = 'public' | 'private';
+
+export type Role = 'user' | 'admin';
