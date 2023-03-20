@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import associateModels from '../Database/Models/Associates';
+import ErrorHandler from '../Database/Middlewares/ErrorHandler';
 
 class App {
   public app: express.Express;
@@ -26,6 +27,7 @@ class App {
     this.app.use(cors({
       exposedHeaders: ['X-User-Token'],
     }));
+    this.app.use(ErrorHandler.handler);
   }
 
   public start(PORT: string | number): void {
