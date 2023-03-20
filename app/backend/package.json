@@ -5,18 +5,25 @@
     "predev": "npm run build",
     "dev": "nodemon --watch \"./src/**\" ./src/API/server.ts",
     "build": "rm -rf dist && tsc",
-    "db:reset": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all"
+    "db:reset": "npx sequelize db:drop && npx sequelize db:create && npx sequelize db:migrate && npx sequelize db:seed:all",
+    "test": "mocha --require ts-node/register tests/**/*.test.ts"
   },
   "devDependencies": {
+    "@types/chai": "^4.3.4",
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
     "@types/jsonwebtoken": "^9.0.1",
+    "@types/mocha": "^10.0.1",
+    "@types/sinon": "^10.0.13",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
+    "chai": "^4.3.7",
     "eslint": "^8.36.0",
     "eslint-plugin-react": "^7.32.2",
+    "mocha": "^10.2.0",
     "nodemon": "^2.0.15",
     "sequelize-cli": "^6.3.0",
+    "sinon": "^15.0.2",
     "ts-node": "^10.7.0",
     "ts-node-dev": "^1.1.8"
   },
