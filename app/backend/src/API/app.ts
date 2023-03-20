@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import associateModels from '../Database/Models/Associates';
 
 class App {
   public app: express.Express;
@@ -10,6 +11,7 @@ class App {
     this.config();
 
     this.app.get('/', (_req, res) => res.json({ ok: true }));
+    associateModels();
   }
 
   private config(): void {
